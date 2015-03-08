@@ -16,6 +16,6 @@
 
     console.log(plus(2, 2));
 
-}()); // end anon fun
+}()); // end anon func
 
 
