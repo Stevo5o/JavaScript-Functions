@@ -14,7 +14,12 @@
         return sum;
     };
 
-    console.log(plus(2, 2));
+    console.log(plus(4, 2));
+
+    // immediately invoked and initialize values
+    multi = function (a, b) {       
+        return console.log(a * b);
+    }(4, 2);
 
 }()); // end anon func
 
