@@ -15,10 +15,10 @@
  	status: 'Nice',
 	plus: function(a, b) {
 		return (			
-			console.log(this),
-			console.log(a + b),
-			console.log(arguments),
-			console.log(this.status)
+			console.log(this), // Object
+			console.log(a + b), // 4
+			console.log(arguments), // [2, 2]
+			console.log(this.status) // Nice
 		);
 	}
 };
