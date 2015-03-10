@@ -8,20 +8,23 @@
 
 // immediately invoked anonymous function
 (function() {
-// The 'this' arg points to the object 
-// Invoke 'this' using dot notation 
-// Binding 'this' happens at invocation time
- var calc = {
- 	status: 'Nice',
-	plus: function(a, b) {
-		return (			
-			console.log(this), // Object
-			console.log(a + b), // 4
-			console.log(arguments), // [2, 2]
-			console.log(this.status) // Nice
-		);
+	// new creates a new instance of the obj
+	// Each new instance has it's own set of properties
+	// 'this' arg points to the instance of the obj
+	// Constructor names are capitalized 
+	var Dog = function() {
+		var name, breed;
+		return console.dir(this);
 	}
-};
-	calc.plus(2, 2);
 
+	firstDog = new Dog;
+	firstDog.name = 'Rover';
+	firstDog.breed = 'Doberman';
+
+	secondDog = new Dog;
+	secondDog.name = 'Fluffy';
+	secondDog.breed = 'Poodle';
+
+	console.log(firstDog.name);
+	console.log(secondDog.name);
 }()); // end anon func
