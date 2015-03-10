@@ -15,7 +15,7 @@
 	var Dog = function() {
 		var name, breed;
 		return console.dir(this);
-	}
+	};
 
 	firstDog = new Dog;
 	firstDog.name = 'Rover';
