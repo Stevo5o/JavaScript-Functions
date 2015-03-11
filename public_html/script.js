@@ -8,19 +8,22 @@
 
 // immediately invoked anonymous function
 (function() {
-	// invoking through call & apply
-	// Indirect invocation
-	// Define the value of the 'this' agrument
-	// Control: 'this' and 'arguments'
-	// 'Call' passes a value 'Apply' passes an array
-	var speak = function(what) {
-		console.log(what);
-		console.log(this.love);
-		console.log(this.normal);
+	// The arguments parameter
+	// An array like obj
+	// Numerical index arguments[x]
+	// Get the arguments.length
+	// Loop through arguments
+	// Cannot use array methods
+
+	// function literal
+	var plus = function() {
+		var sum = 0;
+		for (var i = arguments.length - 1; i >= 0; i--) {
+			sum += arguments[i];
+		};
+		return sum;
 	};
 
-	var saySomething = {normal: "meow", love: "purr", hate: "hiss"};
+	console.log(plus(2, 2, 2, 3, 2, 3, 4));
 
-	speak.call(saySomething, saySomething.hate);
-	speak.apply(saySomething, ['meouff']);
 }()); // end anon func
