@@ -8,34 +8,19 @@
 
 // immediately invoked anonymous function
 (function() {
-	// Prototypal Inheritance 
-	// Every object can be based
-	// Multiple objs can inherit 
-	// All objs inherit properties
-	// Declarations inherit from Function
-	// Function constructor inherits from Object
-	var speak = function(saywhat) {
-		console.log(saywhat);
-	};
+	// invoking through call & apply
+	// Indirect invocation
+	// Define the value of the 'this' agrument
+	// Control: 'this' and 'arguments'
+	// 'Call' passes a value 'Apply' passes an array
+	var speak = function(what) {
+		console.log(what);
+		console.log(this.love);
+		console.log(this.normal);
+	}
 
-	var Dog = function() {
-		var name, breed;
-	};
+	var saySomething = {normal: "meow", love: "purr", hate: "hiss"}
 
-	var Cat = function() {
-		var name, breed;
-	};
-
-	Dog.prototype.speak = speak;
-	Cat.prototype.speak = speak;
-
-	firstDog = new Dog;
-	firstDog.name = "Rover";
-	firstDog.breed = "Doberman";
-	firstDog.speak('woof');
-
-	firstCat = new Cat;
-	firstCat.name = "Tiger";
-	firstCat.breed = "Bengal";
-	firstCat.speak('meow');
+	speak.call(saySomething, saySomething.hate);
+	speak.apply(saySomething, ['meouff']);
 }()); // end anon func
