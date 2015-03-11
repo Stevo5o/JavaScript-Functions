@@ -19,7 +19,7 @@
 		console.log(this.normal);
 	};
 
-	var saySomething = {normal: "meow", love: "purr", hate: "hiss"}
+	var saySomething = {normal: "meow", love: "purr", hate: "hiss"};
 
 	speak.call(saySomething, saySomething.hate);
 	speak.apply(saySomething, ['meouff']);
