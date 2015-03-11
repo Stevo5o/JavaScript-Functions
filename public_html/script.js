@@ -17,7 +17,7 @@
 		console.log(what);
 		console.log(this.love);
 		console.log(this.normal);
-	}
+	};
 
 	var saySomething = {normal: "meow", love: "purr", hate: "hiss"}
 
