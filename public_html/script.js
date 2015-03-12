@@ -7,26 +7,16 @@
  */
 
 // immediately invoked anonymous function /closure
-(function() {
-	// Scope: life and death of a var
-	// Block scope: vars live with {}
-	// Function scope: vars live in functions
-	// Scope chain
-	// Dangerous global vars
-	// Vars definitions are hoisted
-	// JS rewrites code
 
-	function myLizard() {
-		var lizardName = 'Izzy';
+// Modules reuse code across apps
+// Namespacing protects vars
 
-		function otherLizard() {
-			var lizardName = 'Izzard';
-			console.log(lizardName + ' says hiss');
+var ste = (function() {
+
+	return {
+		speak: function() {
+			console.log('hello');
 		}
-
-		otherLizard();
 	};
 
-	myLizard();
-
-}()); // end anon func
+})(); // end anon func
