@@ -6,17 +6,22 @@
  *
  */
 
-// immediately invoked anonymous function /closure
-
 // Modules reuse code across apps
 // Namespacing protects vars
+// Passing args
+// Setting defaults
 
 var ste = (function() {
+	var DEFAULTS = {
+		say: 'hello'
+	};
 
 	return {
 		speak: function() {
-			console.log('hello');
+			var myArguments = arguments[0] || '';
+			var statement = myArguments.say || DEFAULTS.say;
+			console.log(statement);
 		}
 	};
 
-})(); // end anon func
+})();
