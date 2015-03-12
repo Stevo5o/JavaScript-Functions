@@ -8,19 +8,25 @@
 
 // immediately invoked anonymous function /closure
 (function() {
-	function kung() {
-		console.log('foo');
+	// Scope: life and death of a var
+	// Block scope: vars live with {}
+	// Function scope: vars live in functions
+	// Scope chain
+	// Dangerous global vars
+	// Vars definitions are hoisted
+	// JS rewrites code
+
+	function myLizard() {
+		var lizardName = 'Izzy';
+
+		function otherLizard() {
+			var lizardName = 'Izzard';
+			console.log(lizardName + ' says hiss');
+		}
+
+		otherLizard();
 	};
 
-	kung();
+	myLizard();
 
-	var iKnow = function kung() {
-		console.log('bar');
-	};
-
-	iKnow();
-
-	var iKnow = function() {
-		console.log('Foo');
-	}();
 }()); // end anon func
