@@ -6,24 +6,21 @@
  *
  */
 
-// immediately invoked anonymous function
+// immediately invoked anonymous function /closure
 (function() {
-	// The arguments parameter
-	// An array like obj
-	// Numerical index arguments[x]
-	// Get the arguments.length
-	// Loop through arguments
-	// Cannot use array methods
-
-	// function literal
-	var plus = function() {
-		var sum = 0;
-		for (var i = arguments.length - 1; i >= 0; i--) {
-			sum += arguments[i];
-		};
-		return sum;
+	function kung() {
+		console.log('foo');
 	};
 
-	console.log(plus(2, 2, 2, 3, 2, 3, 4));
+	kung();
 
+	var iKnow = function kung() {
+		console.log('bar');
+	};
+
+	iKnow();
+
+	var iKnow = function() {
+		console.log('Foo');
+	}();
 }()); // end anon func
