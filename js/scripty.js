@@ -1,8 +1,18 @@
 /**
  * scripty.js
- * @ Stephen O'Connor, 2017
+ * @ Stephen O Connor, 2017
  *
  */
+
+// mdn closures
+function init() {
+var name = 'MDN Closures';
+function displayName() {
+	alert(name);
+}
+displayName();
+}
+init();
 
 var ste = (function() {
 	var DEFAULTS = {
@@ -26,3 +36,18 @@ var ste = (function() {
 	};
 
 })();
+
+function showName(firstName, lastName) {
+	var nameIntro = "Your name: ";
+
+	function makeFullName(theLastName) {
+		return nameIntro + firstName + theLastName;
+	}
+
+return makeFullName;
+
+}
+
+showName("Stephen", "O\'Connor" );
+
+
