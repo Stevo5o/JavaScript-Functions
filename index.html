@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<!-- @ Stephen O'Connor -->
+<html>
+    <head>
+        <title>Learning JS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>Learning JS</div>
+        <ul id="steSpeak"></ul>
+    </body>
+    <script src="js/scripty.js"></script>
+    <script>
+        document.getElementById('steSpeak').innerHTML = ste.speak( { say: 'howya <br>' } ).run().speak({ say: 'run faster<br>'}).run({speed: 'faster<br>'});        
+    </script>
+</html>
