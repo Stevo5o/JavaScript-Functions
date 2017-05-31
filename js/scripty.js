@@ -6,28 +6,28 @@
 
 // mdn closures
 function init() {
-var name = 'MDN Closures';
-function displayName() {
-	alert(name);
-}
-displayName();
+	var name = 'MDN Closures';
+	function displayName() {
+		console.log(name);
+	}
+	displayName();
 }
 init();
 
-var ste = (function() {
+var ste = (function () {
 	var DEFAULTS = {
 		say: 'hello',
 		speed: 'normal'
 	};
 
 	return {
-		speak: function() {
+		speak: function () {
 			var myArguments = arguments[0] || '';
 			var statement = myArguments.say || DEFAULTS.say;
 			document.write(statement);
 			return this; // return ste obj
 		},
-		run: function() {
+		run: function () {
 			var myArguments = arguments[0] || '';
 			var running = myArguments.speed || DEFAULTS.speed;
 			document.write('running...' + running);
@@ -44,10 +44,10 @@ function showName(firstName, lastName) {
 		return nameIntro + firstName + theLastName;
 	}
 
-return makeFullName;
+	return makeFullName;
 
 }
 
-showName("Stephen", "O\'Connor" );
+showName("Stephen", "O\'Connor");
 
 
